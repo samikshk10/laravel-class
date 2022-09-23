@@ -20,7 +20,11 @@ Route::get('/', function () {
         'articles'=> Article::getallarticles()
     ]);
 });
-
-// Route::get('/',function(){
-//     return view('welcome',)
-// });
+//{id} -> wildcard
+Route::get('article/{id}',function($id){  //$id is wildcard id
+    return view('article',[
+        'article'=> Article::getsinglearticle($id)
+        
+        
+    ]);
+});

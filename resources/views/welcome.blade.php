@@ -26,7 +26,7 @@
     
         ?>
        <div> @foreach($articles as $value)</div>
-        <h2 class="text-center mt-4 text-italic">{{$value['title']}}  </h2>
+        <h2 class="text-center mt-4 text-italic bg-primary p-2  "><a href="article/{{$value['id']}}" class="text-white">{{$value['title']}} </a> </h2>
         <div class="py-3 text-justify ml-2 mr-2"><p> {{$value['desc'] }}</p></div>
          @endforeach
         
